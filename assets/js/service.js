@@ -18,7 +18,7 @@ export async function getBooks() {
 export async function getBooksById(id) {
     try {
         const res = await fetch(`${BASE_URL}/${id}`)
-        if(!res.ok){
+        if (!res.ok) {
             throw new Error()
         }
         const data = await res.json()
@@ -27,4 +27,14 @@ export async function getBooksById(id) {
         console.error(error.message)
     }
 
+}
+
+export async function addBook(data) {
+    const res = await fetch(BASE_URL, {
+        method: "POST",
+        headers: {
+            'Content-Type': "application/json"
+        },
+        body: {  }
+    })
 }

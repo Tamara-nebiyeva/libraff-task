@@ -17,6 +17,8 @@ function searchFilter(data) {
   showBooks(filteredData)
 }
 
+
+
 function showBooks(data) {
   cards.innerHTML = ''
   data.forEach(element => {
